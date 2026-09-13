@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "历史记录区间删除",
+    "version": "1.0",
+    "description": "为 Edge 历史记录添加“选择到这里”批量删除功能",
+    "permissions": [
+        "history"
+    ],
+    "action": {
+        "default_title": "历史记录区间删除",
+        "default_popup": "popup.html"
+    }
+}
