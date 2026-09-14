@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            width: 760px;
+            margin: 0;
+            font: 14px system-ui, -apple-system, "Segoe UI", sans-serif;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            padding: 8px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #search {
+            flex: 1;
+            padding: 5px 8px;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        #list {
+            max-height: 540px;
+            overflow: auto;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .row:hover {
+            background: #f5f5f5;
+        }
+
+        .row.anchor {
+            background: #e8f0fe;
+        }
+
+        .info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 500;
+        }
+
+        .url {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .time {
+            color: #888;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        #count {
+            color: #555;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <input id="search" placeholder="搜索历史记录..." />
+        <button id="clearAnchor">清除锚点</button>
+        <button id="deleteSelected">删除选中</button>
+        <span id="count">已选 0 条</span>
+    </header>
+
+    <div id="list"></div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
